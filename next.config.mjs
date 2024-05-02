@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: {
-        publicPath: '/',
-    },
+  output: 'standalone', // or 'export'
+  // other configurations...
 };
 
 export default nextConfig;
