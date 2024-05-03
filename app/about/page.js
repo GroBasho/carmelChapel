@@ -1,9 +1,43 @@
 'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import FrLobo from '@/images/frPollyLobo.png';
+import { text } from '@/constants';
 
 const About = () => {
+  const [hideDescription, setHideDescription] = useState(false);
+  const [description, setDescription] = useState(text.slice(0, 596));
+
+  // Regular expressions to find text within quotes and round brackets
+  const quotedText = /"(.*?)"/g;
+
+  // Function to wrap matched text with span and apply different styles
+  const highlightText = (text, regex, className) => {
+    return text.split(regex).map((part, index) => {
+      if (index % 2 === 1) {
+        // Text inside quotes or round brackets
+        return <span key={index} className={className}>{part}</span>;
+      } else {
+        // Normal text
+        return part;
+      }
+    });
+  };
+
+  function toggleDescription() {
+    if (hideDescription === false) {
+      setHideDescription(true);
+      setDescription(text);
+      return;
+    }
+    setHideDescription(false);
+    setDescription(text.slice(0, 77))
+  }
+
+  const toggleSecondDiv = () => {
+    setShowSecondDiv(!showSecondDiv);
+  };
+
   return (
     <div className='flex flex-col w-full h-auto'>
       <div className='w-full flex flex-col justify-center items-center md:pt-8 md:px-28'>
@@ -19,11 +53,11 @@ const About = () => {
             <div className='Livvic-Medium md:text-2xl burgundy break-all'>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               Lorem Ipsum has been the industry's standard dummy text ever
-              <b className='yellow'> since the 1500s</b>, when an unknown printer
+              since the 1500s, when an unknown printer
               took a galley of type and scrambled it to make a type specimen book.
               when an unknown printer took a galley of type and scrambled it to make a type specimen
               book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever <b className='yellow'>since the 1500s</b>.
+              has been the industry's standard dummy text ever since the 1500s.
             </div>
           </div>
           <div className='md:w-4/12'>
@@ -51,38 +85,15 @@ const About = () => {
           </div>
 
           <div className='Livvic-Medium sm:text-2xl text-center text-white md:break-normal break-all'>
-            Curtorim is a picturesque, tranquil and serene village with hills and hillocks with green paddy fields
-            and an array of coconut palm trees with various water bodies, specially the lakes and ponds amongst
-            the khazan lands, River Zuari flowing along the village border gives the village a unique character.
-            To the eastern part of the village lies the Karminagar area with a prominent Chapel, devoted to the
-            Lady of Carmel. The Chapel is situated at a distance of 2.5 km from the main St. Alex Church of Curtorim
-            and it is situated along the road leading from Margao to Macazana. The Chapel was built by the residents
-            of <b className='yellow'>Dongorpelem</b>, <b className='yellow'>Curtorim</b> and
-            <b className='yellow'>Fr. Inacio da Cunha</b>, in <b className='yellow'>1780-82</b> was erected by the
-            provision dated <b className='yellow'>22-11-1782</b> and it was thrown open to the public on 22-11-1782.
-            Nossa Senhora do Carmo Chapel (Carmel Chapel/ Carmi Copel) at Vanvottem(Anvottem) in Kurhtori(Curtorim)
-            is one of the outstanding examples of chapels – the other two chapels, (Nossa Senhora do Rosario Chapel
-            at Mavadd(Fatorda) in <b className='yellow'>1769</b>, and St. Joaquim Chapel at Boddem(Borda) in Morhgoum(Margao) in <b className='yellow'>1783-1786</b>)
-            Source: “Shrines and Mansions of Goa” in MARG(Golden Goa), Bombay, by <b className='yellow'>Dr. Jose Pereira</b>
-            – a son of Curtorim. He also presented a façade of Carmel Chapel in MARG in “Rococo Goa”
-          </div>
-          <div className='Livvic-Medium sm:text-2xl text-center text-white md:break-normal break-all'>
-            The Chapel was earlier called as <b className='yellow'>Dongorpelem Chapel</b> as in the olden days, people had to traverse the
-            hillock of Paldem, to reach the place and to go for the onward journey namely Macazana and Chandor. It
-            is at this place one can find a <b className='yellow'>DOVONNEM</b>, a head rest to the weary travellers to keep their merchandise
-            and to take rest. The said ‘dovonnem’ is still maintained although it has undergone many modifications.
-            The present road going from Margao to Macasana did not exist then and as per records, it is only
-            around 1890 that the present road was built. The Chapel did not have a resident Chaplain hence priests
-            from the Church used to conduct the essentials services. it was under the dynamic initiative of
-            Fr. Joanito Cromacio Mascarenhas,  the work for the construction of residence started ( ) which was
-            later inaugurated during the tenure of Fr. Joaquim Paulo Joao Avertano Dias Alberto on 25.04.1957. as
-            the population of the area started to increase, the main hall became insufficient for the devotees.
-            Realising the need for the expansion, a side wing was opened and later still another wing on the right
-            side was also opened during the tenure of Fr. Saude Pereira thus providing ample space for the devotees.
-            As all these were short term measures, a detailed plan was drawn out during the tenure of Fr. Anthony
-            Rodrigues, although it could not be materialised owing to the sudden transfer on promotion as Parish Priest.
-            Fr. Louis Alvares who followed next was very passionate about the construction of the new chapel but again
-            owing to his sudden transfer, the plan had to be shelved once again.
+            {highlightText(description, quotedText, 'yellow')} &nbsp;
+            {description && description?.length > 60 && (
+              <button
+                className="underline text-[yellow]"
+                onClick={toggleDescription}
+              >
+                {hideDescription ? "less" : "more"}
+              </button>
+            )}
           </div>
         </div>
       </div>
