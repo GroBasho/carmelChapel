@@ -31,7 +31,7 @@ const About = () => {
       return;
     }
     setHideDescription(false);
-    setDescription(text.slice(0, 77))
+    setDescription(text.slice(0, 596))
   }
 
   const toggleSecondDiv = () => {
