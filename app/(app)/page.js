@@ -1,112 +1,42 @@
+'use client'
+import Hero from '@/components/Hero';
+import Logo from '@/images/transparentLogo.png';
 import Image from "next/image";
+import { useState } from 'react';
 
 export default function Home() {
+  const [readToggle, setReadToggle] = useState(false);
+
+  const toggleTruncation = () => {
+    setReadToggle(!readToggle);
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
+    <main className=" bg-white">
+      <Hero/>
+
+      <div  className="relative about bg-[#80011F] p-4 py-10">
+        <h3 className='Abril-Regular text-5xl text-center absolute bg-[#80011F] inset-x-1/4 top-5 px-4'>ABOUT</h3>
+        <div className="about-content border-4 border-[#FFF5E1] rounded-3xl  flex flex-col-reverse p-5 px-10 pt-12 justify-center content-center gap-y-12  lg:flex-row lg:justify-between lg:items-center lg:p-12 lg:px-20 lg:gap-x-10">
+            <p className={`Livvic-Medium text-justify lg:max-w-2xl line-clamp-5`} onClick={toggleTruncation}>
+            Curtorim is a picturesque, tranquil and serene village with hills and hillocks with green paddy fields and an array of coconut palm trees with various water bodies, specially the lakes and ponds amongst the khazan lands, River Zuari flowing along the village border gives the village a unique character. To the eastern part of the village lies the Karminagar area with a prominent Chapel, devoted to the Lady of Carmel.
+The Chapel is situated at a distance of 2.5 km from the main St. Alex Church of Curtorim and it is situated along the road leading from Margao to Macazana. The Chapel was built by the residents of Dongorpelem, Curtorim and Fr. Inacio da Cunha, in 1780-82 was erected by the provision dated 22.11.1782 and it was thrown open to the public on 22-11-1782. Nossa Senhora do Carmo Chapel (Carmel Chapel/ Carmi Copel) at Vanvottem (Anvottem ) in Kurhtori (Curtorim) is one of the outstanding examples of chapels – the other two chapels, (Nossa Senhora do Rosario Chapel at Mavadd (Fatorda) in 1769, and St. Joaquim Chapel at Boddem (Borda) in Morhgoum (Margao) in 1783-1786 (Source: “Shrines and Mansions of Goa” in MARG (Golden Goa), Bombay, pg 71 by Dr. Jose Pereira – a son of Curtorim. He also presented a façade of Carmel Chapel in MARG. Fig 11, pg 74 in “Rococo Goa”
+ The Chapel was earlier called as “Dongorpelem Chapel” as in the olden days, people had to traverse the hillock of Paldem, to reach the place and to go for the onward journey namely Macazana and Chandor. It is at this place one can find a DOVONNEM, a head rest to the weary travellers to keep their merchandise and to take rest. The said ‘dovonnem’ is still maintained although it has undergone many modifications. The present road going from Margao to Macasana did not exist then and as per records, it is only around 1890 that the present road was built. 
+The Chapel did not have a resident Chaplain hence priests from the Church used to conduct the essentials services. it was under the dynamic initiative of Fr. Joanito Cromacio Mascarenhas,  the work for the construction of residence started ( ) which was later inaugurated during the tenure of Fr. Joaquim Paulo Joao Avertano Dias Alberto on 25.04.1957. as the population of the area started to increase, the main hall became insufficient for the devotees. Realising the need for the expansion, a side wing was opened and later still another wing on the right side was also opened during the tenure of Fr. Saude Pereira thus providing ample space for the devotees.
+As all these were short term measures, a detailed plan was drawn out during the tenure of Fr. Anthony Rodrigues, although it could not be materialised owing to the sudden transfer on promotion as Parish Priest. Fr. Louis Alvares who followed next was very passionate about the construction of the new chapel but again owing to his sudden transfer, the plan had to be shelved once again.
+
+            </p>
+            <Image 
+              className="self-center"
+              src={Logo}
+              alt="chapel logo"
               priority
             />
-          </a>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      
+      <div className="events bg-[#FFF5E1]">
+test
       </div>
     </main>
   );

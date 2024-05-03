@@ -66,6 +66,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Comforter-Regular";
+  src: url('/assets/fonts/Comforter-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* FONTS  */
 .Livvic-Regular {
   font-family: Livvic-Regular;
@@ -81,6 +88,9 @@
 }
 .Abril-Regular {
   font-family: Abril-Regular;
+}
+.Comforter-Regular {
+  font-family: Comforter-Regular;
 }
 
 body {
