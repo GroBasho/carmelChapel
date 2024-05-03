@@ -64,7 +64,7 @@ export default function Home() {
               </div>
           </div>
       </div>
-      <div className='bg-[#80011F]'>test</div>
+      <div className='bg-[#80011F] text-[#80011F]'>test</div>
     </main>
   );
 }
