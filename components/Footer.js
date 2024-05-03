@@ -19,7 +19,7 @@ const Footer = () => {
             <span className=''>carmelchapelcurtorim@gmail.com</span>
             <span className='mx-2 hidden sm:inline-flex'>|</span>
             <br className='sm:hidden' />
-            <span className=''>Tel: +91 98765 43210 </span>
+            <span className=''>Tel: +91 98906 60667 </span>
           </div>
         </div>
         <div className='flex sm:flex-row flex-col justify-end items-center sm:gap-20 text-black w-full text-xl my-3.5'>
