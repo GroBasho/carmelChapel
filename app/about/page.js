@@ -31,11 +31,7 @@ const About = () => {
       return;
     }
     setHideDescription(false);
-<<<<<<< HEAD
     setDescription(text.slice(0, 596))
-=======
-    setDescription(text.slice(0, 77))
->>>>>>> caf502b (Changes)
   }
 
   const toggleSecondDiv = () => {
