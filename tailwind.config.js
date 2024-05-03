@@ -7,7 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      backgroundImage: {
+        historyBg: "url('/assets/images/historyBg.jpg')",
+      }
     },
   },
   plugins: [],

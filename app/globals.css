@@ -83,14 +83,21 @@
   font-family: Abril-Regular;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Fonts Colors */
+.burgundy{
+  color: #80011F;
+}
+.yellow{
+  color: #FED700;
+}
+.blue{
+  color: #4169E2;
+}
+.navyBlue{
+  color: #002365;
+}
+.lightBlack{
+  color: #1E1E1E;
 }
 
 @layer utilities {

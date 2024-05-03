@@ -11,7 +11,7 @@ const Navbar = () => {
     const pathname = usePathname();
     const [toggleDropdown, settoggleDropdown] = useState(false);
     return (
-        <div className='flex sm:h-24 h-20 w-full bg-white sticky justify-between items-center'>
+        <div className='flex sm:h-24 h-20 w-full bg-white sticky top-0 justify-between items-center z-50'>
             <Link href='/' className='cursor-pointer md:w-4/12 px-5'>
                 <Image
                     src={Logo}
