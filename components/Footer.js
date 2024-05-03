@@ -7,7 +7,11 @@ const Footer = () => {
   const pathname = usePathname();
 
   return (
+<<<<<<< HEAD
     <div className='h-fit w-full bg-white sm:bg-[#FFF5E1] sm:px-28 sm:pt-9 sm:pb-4 py-2 text-[#80011F] Livvic-Medium sm:text-xl text-md text-center sm:text-left'>
+=======
+    <div className='h-fit w-full bg-white sm:bg-[#FFF5E1] sm:px-28 sm:pt-9 sm:pb-4 py-2 text-[#80011F] Livvic-Medium sm:text-xl text-md  text-center sm:text-left'>
+>>>>>>> 579fb59 (add:data)
       <div className='flex sm:flex-row flex-col justify-center items-center '>
         <div className='w-full'>
           <h3 className='sm:text-5xl text-3xl Abril-Regular uppercase '>
