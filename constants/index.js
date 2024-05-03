@@ -204,3 +204,102 @@ export const nuns = [
         ward: "Sonvonxem Curtorim",
     },
 ];
+
+export const priestsTimeline = [
+    {
+        No: 1,
+        Name: "Milagres Dias",
+        Origin: "Chorao",
+        Year: "2022 - Present"
+    },
+    {
+        No: 2,
+        Name: "(Late) Clifton Fernandes",
+        Origin: "Panzorconi",
+        Year: "2018 - 2022"
+    },
+    {
+        No: 3,
+        Name: "Edmundo Barreto",
+        Origin: "Sadolxem",
+        Year: "2013 - 2018"
+    },
+    {
+        No: 4,
+        Name: "Luis Pinto Lourenco",
+        Origin: "Colva",
+        Year: "June 2013 – Sept 2013"
+    },
+    {
+        No: 5,
+        Name: "Lourenco Bartolomeu Roque Rodrigues",
+        Origin: "Majorda",
+        Year: "2012 - 2013"
+    },
+    {
+        No: 6,
+        Name: "Luis Alvares",
+        Origin: "Nuvem",
+        Year: "2011 - 2012"
+    },
+    {
+        No: 7,
+        Name: "Lourdinho Anthony Rodrigues",
+        Origin: "Canacona",
+        Year: "2006 - 2011"
+    },
+    {
+        No: 8,
+        Name: "Bartolomeu Victor Cruz Viegas",
+        Origin: "Carmona",
+        Year: "2005 - 2006"
+    },
+    {
+        No: 9,
+        Name: "Agnelo Cipriano Rodrigues",
+        Origin: "Socorro",
+        Year: "2001 - 2005"
+    },
+    {
+        No: 10,
+        Name: "Jacinto Ricardo Rodrigues",
+        Origin: "Cavelossim",
+        Year: "1996 - 2001"
+    },
+    {
+        No: 11,
+        Name: "(Late) Minguel D’SIlva",
+        Origin: "Borda",
+        Year: "1991 - 1996"
+    },
+    {
+        No: 12,
+        Name: "(Late) Antonio Cristo Pestaninho Roque de Santana Rodrigues e Mascarenhas",
+        Origin: "Majorda",
+        Year: "1984 - 1991"
+    },
+    {
+        No: 13,
+        Name: "Saude Pereira",
+        Origin: "-",
+        Year: "-"
+    },
+    {
+        No: 14,
+        Name: "(Late) Hildo  Mascarenhas",
+        Origin: "-",
+        Year: "-"
+    },
+    {
+        No: 15,
+        Name: "(Late) Joaquim Paulo Joao Avertano Dias Alberto",
+        Origin: "-",
+        Year: "09-01-1965"
+    },
+    {
+        No: 16,
+        Name: "(Late) Joanito Cromacio Mascarenhas",
+        Origin: "-",
+        Year: "13-11-1954"
+    }
+]
