@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Logo from '@/images/transparentLogo.png';
 import Image from "next/image";
 import { useState } from 'react';
+import BookIcon from '@/images/book.png'
 
 export default function Home() {
   const [readToggle, setReadToggle] = useState(false);
@@ -35,9 +36,35 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="events bg-[#FFF5E1]">
-        test
+      <div className="events bg-[#FFF5E1] flex flex-col p-4 py-10 px-28">
+          <Image src={BookIcon} priority className="self-center" width={100} height={100}/>
+          <h3 className='text-[#80011F] Abril-Regular text-4xl text-center pt-3 lg:text-5xl'>Masses</h3>
+          <div className='timing-container text-[#80011F] pt-5 flex flex-col divide-y-2 divide-current lg:divide-y-0 justify-center lg:justify-between items-center lg:flex-row'>
+              <div className="left-content border-red-400 divide-y-2 divide-current">
+                  <div> 
+                    <p className='Livvic-Bold text-center text-xl'>Weekdays</p>
+                    <p className='text-center Livvic-Semibold pb-3'>(Mon - Sat) - 6:45 <span className='Livvic-Regular'>am</span></p>
+                  </div>
+
+                  <div>
+                    <p className='Livvic-Bold text-center pt-3'>First Friday - Adoration - 4:30 <span className='Livvic-Regular'>pm</span></p>
+                    <p className='text-center Livvic-Semibold pb-3'>followed by Mass</p>
+                  </div>
+              </div>
+              <div className="right-content border-red-400 border-solid divide-y-2 divide-current">
+                  <div>
+                    <p className='Livvic-Bold text-center text-xl pt-3'>Saturday (With Sunday Liturgy)</p>
+                    <p className="text-center Livvic-Semibold pb-3">- 6:00 <span className='Livvic-Regular'>pm</span></p>
+                  </div>
+                  <div>
+                    <p className='Livvic-Bold text-center text-xl pt-3'>Sunday</p>
+                    <p className='text-center Livvic-Semibold'>1st Mass - 6:45 <span className='Livvic-Regular'>am</span></p>
+                    <p className='text-center Livvic-Semibold'>2nd Mass - 8:15 <span className='Livvic-Regular'>am</span></p>
+                  </div>
+              </div>
+          </div>
       </div>
+      <div className='bg-[#80011F]'>test</div>
     </main>
   );
 }
