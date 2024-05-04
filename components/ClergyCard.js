@@ -1,16 +1,18 @@
 import cardBg from "@/images/cardBg.svg";
-import img1 from "@/images/about/clergy/1.png";
 import Image from "next/image";
 
-const ClergyCard = () => {
+const ClergyCard = (props) => {
   return (
-    <div className='bg-[#FFF5E1] w-[400px] h-80 rounded-[30px] relative'>
-      <Image src={cardBg} width={80} alt='Logo' className='w-full absolute' />
+    <div className='bg-[#FFF5E1] w-full h-[400px] rounded-3xl relative p-5'>
+      <Image src={cardBg} width={80} alt='Logo' className='w-full absolute top-0 left-0' />
       <div className='relative p-2 flex flex-col justify-center items-center'>
         <h4 className='text-[#FFF5E1] text-center'>
-          Fr. Geraldo Aleixo Antonio Da Costa
+          {props.name}
         </h4>
-        <Image src={img1} width={200} alt='Photo' className=' ' />
+        <Image src={props.img} height={200} width={200} alt='Photo' className=' ' />
+        <div className="Livvic-Semibold burgundy text-base">{props.location}</div>
+        <div className="Livvic-Semibold burgundy text-base">Born: {props.dob} :: Ordination: {props.ordained} </div>
+        <div className="Livvic-Semibold burgundy text-base">{props.ward}</div>
       </div>
     </div>
   );

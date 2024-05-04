@@ -6,7 +6,7 @@ export const navLink = [
     subLinks: [
       { name: "History", href: "/about" },
       { name: "Associations", href: "/associations" },
-      { name: "Time Line", href: "/timeLine" },
+      { name: "Priests", href: "/timeLine" },
     ]
   },
   { name: "Gallery", href: "/gallery" },
@@ -51,6 +51,7 @@ export const clergyFromCurtorim = [
     dob: "03-10-1939",
     ordained: "10-5-1964",
     ward: "Sinaibhag Curtorim",
+    imgUrl: '/assets/images/about/clergy/1.png'
   },
   {
     key: "2",
@@ -59,6 +60,7 @@ export const clergyFromCurtorim = [
     dob: "06-06-1949",
     ordained: "28-4-1973",
     ward: "Sinaibhag Curtorim",
+    imgUrl: '/assets/images/about/clergy/2.png'
   },
   {
     key: "3",
@@ -67,6 +69,7 @@ export const clergyFromCurtorim = [
     dob: "22-06-1953",
     ordained: "27-10-1984",
     ward: "Gottunguem Curtorim",
+    imgUrl: '/assets/images/about/clergy/3.png'
   },
   {
     key: "4",
@@ -75,6 +78,7 @@ export const clergyFromCurtorim = [
     dob: "16-03-1946",
     ordained: "31-05-1984",
     ward: "Anvottem Curtorim",
+    imgUrl: '/assets/images/about/clergy/4.png'
   },
   {
     key: "5",
@@ -84,6 +88,7 @@ export const clergyFromCurtorim = [
     dob: "18-01-1964",
     ordained: "19-12-1990",
     ward: "Anvottem Curtorim",
+    imgUrl: '/assets/images/about/clergy/5.png'
   },
   {
     key: "6",
@@ -92,6 +97,7 @@ export const clergyFromCurtorim = [
     dob: "06-01-1960",
     ordained: "21-04-1990",
     ward: "Kirdolem Curtorim",
+    imgUrl: '/assets/images/about/clergy/6.png'
   },
   {
     key: "7",
@@ -101,6 +107,7 @@ export const clergyFromCurtorim = [
     dob: "23-09-1967",
     ordained: "30-04-1997",
     ward: "Sonvonxem Curtorim",
+    imgUrl: '/assets/images/about/clergy/7.png'
   },
   {
     key: "8",
@@ -109,6 +116,7 @@ export const clergyFromCurtorim = [
     dob: "06-01-1974",
     ordained: "16-10-2003",
     ward: "Corjem Curtorim",
+    imgUrl: '/assets/images/about/clergy/8.png'
   },
   {
     key: "9",
@@ -117,6 +125,7 @@ export const clergyFromCurtorim = [
     dob: "4th April",
     ordained: "17-05-2014",
     ward: "Agxem Curtorim",
+    imgUrl: '/assets/images/about/clergy/9.png'
   },
 ];
 
@@ -130,6 +139,7 @@ export const nuns = [
     dob: "10-03-1964",
     profession: "14-09-1987",
     ward: "New Monzon Curtorim",
+    imgUrl: '/assets/images/about/nuns/1.png'
   },
   {
     key: "2",
@@ -141,6 +151,7 @@ export const nuns = [
     dob: "19-05-1973",
     profession: "03-05-1994",
     ward: "Corjem Curtorim",
+    imgUrl: '/assets/images/about/nuns/2.png'
   },
   {
     key: "3",
@@ -152,6 +163,7 @@ export const nuns = [
     dob: "04-09-1978",
     profession: "01-10-2002",
     ward: "Gotnibhat Curtorim",
+    imgUrl: '/assets/images/about/nuns/3.png'
   },
   {
     key: "4",
@@ -162,6 +174,7 @@ export const nuns = [
     dob: "08-10-1970",
     profession: "19-03-1994",
     ward: "Gotnibhat Curtorim",
+    imgUrl: '/assets/images/about/nuns/4.png'
   },
   {
     key: "5",
@@ -172,6 +185,7 @@ export const nuns = [
     dob: "08-10-1970",
     profession: "19-03-1994",
     ward: "Tembi Curtorim",
+    imgUrl: '/assets/images/about/nuns/5.png'
   },
   {
     key: "6",
@@ -182,6 +196,7 @@ export const nuns = [
     dob: "10-08-1967",
     profession: "14-09-1989",
     ward: "Gottunguem Curtorim",
+    imgUrl: '/assets/images/about/nuns/6.png'
   },
   {
     key: "7",
@@ -192,6 +207,7 @@ export const nuns = [
     dob: "11-08-1944",
     profession: "15-11-1975",
     ward: "St. Anthony Curtorim",
+    imgUrl: '/assets/images/about/nuns/7.png'
   },
   {
     key: "8",
@@ -202,6 +218,7 @@ export const nuns = [
     dob: "30-10-1978",
     profession: "14-09-1999",
     ward: "Sonvonxem Curtorim",
+    imgUrl: '/assets/images/about/nuns/8.png'
   },
 ];
 
@@ -301,5 +318,163 @@ export const priestsTimeline = [
     Name: "(Late) Joanito Cromacio Mascarenhas",
     Origin: "-",
     Year: "13-11-1954"
+  }
+]
+
+export const gallery = [
+  { key: 1, imgUrl: '/assets/gallery/1.jpg' },
+  { key: 2, imgUrl: '/assets/gallery/2.jpg' },
+  { key: 3, imgUrl: '/assets/gallery/3.jpg' },
+  { key: 4, imgUrl: '/assets/gallery/4.jpg' },
+  { key: 5, imgUrl: '/assets/gallery/5.jpg' },
+  { key: 6, imgUrl: '/assets/gallery/6.jpg' },
+  { key: 7, imgUrl: '/assets/gallery/7.jpg' },
+  { key: 8, imgUrl: '/assets/gallery/8.jpg' },
+  { key: 9, imgUrl: '/assets/gallery/9.jpg' },
+  { key: 11, imgUrl: '/assets/gallery/11.jpg' },
+  { key: 12, imgUrl: '/assets/gallery/12.jpg' },
+  { key: 13, imgUrl: '/assets/gallery/13.jpg' },
+  { key: 10, imgUrl: '/assets/gallery/10.jpg' },
+  { key: 14, imgUrl: '/assets/gallery/14.jpg' },
+  { key: 15, imgUrl: '/assets/gallery/15.jpg' },
+  { key: 16, imgUrl: '/assets/gallery/16.jpg' },
+  { key: 17, imgUrl: '/assets/gallery/17.jpg' },
+  { key: 18, imgUrl: '/assets/gallery/18.jpg' },
+  { key: 19, imgUrl: '/assets/gallery/19.jpg' },
+  { key: 20, imgUrl: '/assets/gallery/20.jpg' },
+  { key: 21, imgUrl: '/assets/gallery/21.jpg' }
+]
+
+export const priestFromCarmelArea = [
+  {
+    name: "Antonio Filipe Neri Da Costa",
+    origin: "Sinaibhag Curtorim",
+    curr: "USA",
+  },
+  {
+    name: "Cosme J V C N de Da Costa (SFX)",
+    origin: "Argicol Curtorim",
+    curr: "-",
+  },
+  {
+    name: "Roque Fernandes (SDB)",
+    origin: "Argicol Curtorim",
+    curr: "CALIFORNIA USA",
+  },
+  {
+    name: "Ralph Da Costa (SJ)",
+    origin: "Sinaibhag Curtorim",
+    curr: "Bangalore",
+  },
+  {
+    name: "Joaquim Januario Rebello",
+    origin: "Corjem Curtorim",
+    curr: "New Delhi",
+  },
+  {
+    name: "Vianney Rodrigues",
+    origin: "Anvottem Curtorim",
+    curr: "Mumbai",
+  },
+];
+
+export const havenlyHomeResting1 = [
+  {
+    "id": 1,
+    "name": "Bento Rodrigues",
+    "ward": "Anvottem Curtorim"
+  },
+  {
+    "id": 3,
+    "name": "Alcinho D’Costa",
+    "ward": "Anvottem Curtorim"
+  },
+  {
+    "id": 5,
+    "name": "Carminho F Rodrigues",
+    "ward": "Anvottem Curtorim"
+  },
+  {
+    "id": 7,
+    "name": "Filipino Vaz",
+    "ward": "Gottunguem"
+  },
+  {
+    "id": 9,
+    "name": "Francisco Xavier Costa",
+    "ward": "Pandicol  Curtorim"
+  },
+  {
+    "id": 11,
+    "name": "Alberto Costa",
+    "ward": "Monzon Curtorim"
+  },
+  {
+    "id": 13,
+    "name": "Hedwig Da Costa (SJ)",
+    "ward": "Sinaibhag Curtorim"
+  },
+  {
+    "id": 15,
+    "name": "Vicente Costa",
+    "ward": "Corjem Curtorim"
+  },
+  {
+    "id": 17,
+    "name": "Anacleto E R do C. Fernandes (SFX)",
+    "ward": "Corjem Curtorim"
+  },
+  {
+    "id": 19,
+    "name": "Alberto Francisco Jose do Costa Chaplain – of the Chapel at Dr. Froilano de Melo (Leprosaria)",
+    "ward": "-"
+  }
+]
+
+export const havenlyHomeResting2 = [
+  {
+    "id": 2,
+    "name": "Amancio Menezes",
+    "ward": "Anvottem Curtorim"
+  },
+  {
+    "id": 4,
+    "name": "Aniceto Menezes",
+    "ward": "Anvottem Curtorim"
+  },
+  {
+    "id": 6,
+    "name": "Fr (Dr) Sebastiao Moniz",
+    "ward": "Kirdolem Curtorim"
+  },
+  {
+    "id": 8,
+    "name": "Aleixo Gomes",
+    "ward": "Pandicol  Curtorim"
+  },
+  {
+    "id": 10,
+    "name": "Antonio Faleiro (Madras)",
+    "ward": "Pandicol  Curtorim"
+  },
+  {
+    "id": 12,
+    "name": "Arsenio Salvador Rodrigues",
+    "ward": "Sinaibhag Curtorim"
+  },
+  {
+    "id": 14,
+    "name": "Emidio Rebello",
+    "ward": "Corjem Curtorim"
+  },
+  {
+    "id": 16,
+    "name": "Caetano F.X, Costa",
+    "ward": "Corjem Curtorim"
+  },
+  {
+    "id": 18,
+    "name": "Agusto Rodrigues",
+    "ward": "Tembi Curtorim"
   }
 ]

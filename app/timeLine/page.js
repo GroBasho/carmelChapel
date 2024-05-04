@@ -6,7 +6,22 @@ import TimeLineHero1 from "@/images/timeline2.jpg";
 import TimeLineHero2 from "@/images/timeline3.jpg";
 import TimeLineHero3 from "@/images/timeline4.jpg";
 import Image from "next/image";
-import { priestsTimeline } from "@/constants";
+import { clergyFromCurtorim, havenlyHomeResting1, havenlyHomeResting2, nuns, priestFromCarmelArea, priestsTimeline } from "@/constants";
+import ClergyCard from "@/components/ClergyCard";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import './styles.css';
+
+// import required modules
+import { Autoplay, Pagination } from 'swiper/modules';
+import NunsCard from "@/components/NunsCard";
+import CarmelArea from "@/components/CarmelArea";
+import HavenlyCard from "@/components/HavenlyCard";
 
 const page = () => {
     return (
@@ -15,7 +30,7 @@ const page = () => {
                 <h1 className="Albir-Regular sm:text-5xl burgundy border-b-2 border-b-[yellow] w-fit">Priests Timeline</h1>
             </div>
             <div className="w-full flex flex-col-reverse sm:flex-row">
-                <div className="lg:w-6/12 flex flex-col justify-between h-full lg:gap-[75px]">
+                <div className="lg:w-6/12 flex flex-col justify-between h-full lg:gap-[72px]">
                     <Image
                         src={TimeLineHero}
                         height={800}
@@ -51,6 +66,201 @@ const page = () => {
                             <div className="Livvic-Semibold lg:text-2xl">{priest.Origin}</div>
                         </div>
                     ))}
+                </div>
+            </div>
+
+            <div className="md:block hidden">
+                <div className="w-full flex justify-center items-center pt-10">
+                    <h1 className="Albir-Regular sm:text-4xl burgundy border-b-2 border-b-[yellow] w-fit">CLERGY FROM OUR LADY OF CARMEL CHAPEL CURTORIM</h1>
+                </div>
+                <div className="flex p-10 gap-4">
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        loop={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination, Autoplay]}
+                        className="mySwiper grid grid-cols-3"
+                    >
+                        {clergyFromCurtorim.map((clergy) => (
+                            <SwiperSlide key={clergy.key}>
+                                <ClergyCard
+                                    img={clergy.imgUrl}
+                                    name={clergy.name}
+                                    ward={clergy.ward}
+                                    dob={clergy.dob}
+                                    ordained={clergy.ordained}
+                                    location={clergy.location}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
+            <div className="md:hidden p-5">
+                <div className="w-full flex justify-center items-center pt-10">
+                    <h1 className="Abril-Regular sm:text-4xl burgundy border-b-2 border-b-[yellow] w-fit text-center">CLERGY FROM OUR LADY OF CARMEL CHAPEL CURTORIM</h1>
+                </div>
+                <div className="flex p-10 gap-4">
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        loop={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination, Autoplay]}
+                        className="mySwiper grid grid-cols-3"
+                    >
+                        {clergyFromCurtorim.map((clergy) => (
+                            <SwiperSlide key={clergy.key}>
+                                <ClergyCard
+                                    img={clergy.imgUrl}
+                                    name={clergy.name}
+                                    ward={clergy.ward}
+                                    dob={clergy.dob}
+                                    ordained={clergy.ordained}
+                                    location={clergy.location}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
+
+            <div className="md:block hidden">
+                <div className="w-full flex justify-center items-center pt-10">
+                    <h1 className="Albir-Regular sm:text-4xl burgundy border-b-2 border-b-[yellow] w-fit">NUNS FROM OUR LADY OF CARMEL CHAPEL CURTORIM</h1>
+                </div>
+                <div className="flex p-10 gap-4">
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        loop={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination, Autoplay]}
+                        className="mySwiper grid grid-cols-3"
+                    >
+                        {nuns.map((nun) => (
+                            <SwiperSlide key={nun.key}>
+                                <NunsCard
+                                    img={nun.imgUrl}
+                                    name={nun.name}
+                                    ward={nun.ward}
+                                    dob={nun.dob}
+                                    prof={nun.profession}
+                                    location={nun.location}
+                                    pos={nun.pos}
+                                    cong={nun.cong}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
+            <div className="md:hidden p-5">
+                <div className="w-full flex justify-center items-center pt-10">
+                    <h1 className="Albir-Regular sm:text-4xl burgundy border-b-2 border-b-[yellow] w-fit text-center">NUNS FROM OUR LADY OF CARMEL CHAPEL CURTORIM</h1>
+                </div>
+                <div className="flex p-10 gap-4">
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        loop={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination, Autoplay]}
+                        className="mySwiper grid grid-cols-3"
+                    >
+                        {nuns.map((nun) => (
+                            <SwiperSlide key={nun.key}>
+                                <NunsCard
+                                    img={nun.imgUrl}
+                                    name={nun.name}
+                                    ward={nun.ward}
+                                    dob={nun.dob}
+                                    prof={nun.profession}
+                                    location={nun.location}
+                                    pos={nun.pos}
+                                    cong={nun.cong}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
+            <div className="flex flex-col gap-10">
+                <div className="w-full flex justify-center items-center pt-10">
+                    <h1 className="Albir-Regular sm:text-4xl burgundy border-b-2 border-b-[yellow] w-fit text-center">PRIESTS FROM CARMEL CHAPEL AREA</h1>
+                </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 px-14">
+                    {priestFromCarmelArea.map((item) => (
+                        <CarmelArea
+                            name={item.name}
+                            location={item.curr}
+                            origin={item.origin}
+                        />
+                    ))}
+                </div>
+            </div>
+
+            <div className="md:block hidden">
+                <div className="w-full flex justify-center items-center pt-10">
+                    <h1 className="Albir-Regular sm:text-4xl burgundy border-b-2 border-b-[yellow] w-fit">NUNS FROM OUR LADY OF CARMEL CHAPEL CURTORIM</h1>
+                </div>
+                <div className="flex p-10 gap-4">
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        loop={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination, Autoplay]}
+                        className="mySwiper grid grid-cols-3"
+                    >
+                        {havenlyHomeResting1.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <HavenlyCard
+                                    name={item.name}
+                                    origin={item.origin}
+                                />
+                            </SwiperSlide>
+                        ))}
+                        {havenlyHomeResting2.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <HavenlyCard
+                                    name={item.name}
+                                    origin={item.origin}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
         </div>
