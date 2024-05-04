@@ -1,8 +1,10 @@
-'use client';
-import Image from 'next/image';
-import React, { useState } from 'react';
-import FrLobo from '@/images/frPollyLobo.png';
-import { text } from '@/constants';
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import FrLobo from "@/images/frMilagresDias.png";
+import cp from "@/images/churchP.jpg";
+import cp2 from "@/images/churchP2.png";
+import { text } from "@/constants";
 
 const About = () => {
   const [hideDescription, setHideDescription] = useState(false);
@@ -16,7 +18,11 @@ const About = () => {
     return text.split(regex).map((part, index) => {
       if (index % 2 === 1) {
         // Text inside quotes or round brackets
-        return <span key={index} className={className}>{part}</span>;
+        return (
+          <span key={index} className={className}>
+            {part}
+          </span>
+        );
       } else {
         // Normal text
         return part;
@@ -31,7 +37,7 @@ const About = () => {
       return;
     }
     setHideDescription(false);
-    setDescription(text.slice(0, 596))
+    setDescription(text.slice(0, 596));
   }
 
   const toggleSecondDiv = () => {
@@ -41,32 +47,79 @@ const About = () => {
   return (
     <div className='flex flex-col w-full h-auto'>
       <div className='w-full flex flex-col justify-center items-center md:pt-8 md:px-28'>
-        <div className='sm:text-3xl md:text-5xl Abril-Regular burgundy border-b-2 border-b-[yellow]'>Priest in Our Lady Of Carmel Chaple</div>
+        <div className='sm:text-3xl md:text-5xl Abril-Regular burgundy border-b-2 border-b-[yellow]'>
+          Priest in Our Lady Of Carmel Chaple
+        </div>
         <div className='w-full h-auto my-10 flex flex-col-reverse md:flex-row justify-center items-center'>
           <div className='md:w-8/12 flex flex-col gap-4 p-5 sm:p-0'>
             <div className='Abril-Regular burgundy md:text-4xl sm:text-2xl text-center sm:text-start'>
-              Rev. Fr. Polly Lobo
+              Rev. Fr. Milagres Dias
+            </div>
+            <div className='Livvic-Regular text-sm lightBlack md:ps-2 text-center sm:text-start'>
+              Chaplin - Carmel Chapel, Curtorim
+            </div>
+            {/* <div className='Livvic-Medium md:text-2xl burgundy break-all'>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book. Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s.
+            </div> */}
+          </div>
+          <div className='md:w-4/12'>
+            <Image src={FrLobo} width={400} height={555} alt='frLobo' />
+          </div>
+        </div>
+        <div className='sm:text-3xl md:text-5xl Abril-Regular burgundy border-b-2 border-b-[yellow]'>
+          Priest in St. Alex Church, Curtorim
+        </div>
+        <div className='w-full h-auto my-10 flex flex-col-reverse md:flex-row justify-center items-center'>
+          <div className='md:w-8/12'>
+            <Image src={cp} width={400} height={555} alt='frLobo' />
+          </div>
+          <div className='md:w-4/12 flex flex-col gap-4 p-5 sm:p-0'>
+            <div className='Abril-Regular burgundy md:text-4xl sm:text-2xl text-center sm:text-start'>
+              Rev. Fr. Manuel Dias
             </div>
             <div className='Livvic-Regular text-sm lightBlack md:ps-2 text-center sm:text-start'>
               Parish Priest - St. Alex Church, Curtorim
             </div>
-            <div className='Livvic-Medium md:text-2xl burgundy break-all'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book.
-              when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s.
+            {/* <div className='Livvic-Medium md:text-2xl burgundy break-all'>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book. Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s.
+            </div> */}
+          </div>
+        </div>
+        <div className='w-full h-auto my-10 flex flex-col-reverse md:flex-row justify-center items-center'>
+          <div className='md:w-8/12 flex flex-col gap-4 p-5 sm:p-0'>
+            <div className='Abril-Regular burgundy md:text-4xl sm:text-2xl text-center sm:text-start'>
+              Rev. Fr. Michael Fernandes
             </div>
+            <div className='Livvic-Regular text-sm lightBlack md:ps-2 text-center sm:text-start'>
+              Asst. Parish Priest - St. Alex Church, Curtorim
+            </div>
+            {/* <div className='Livvic-Medium md:text-2xl burgundy break-all'>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book. Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s.
+            </div> */}
           </div>
           <div className='md:w-4/12'>
-            <Image
-              src={FrLobo}
-              width={400}
-              height={555}
-              alt='frLobo'
-            />
+            <Image src={cp2} width={400} height={555} alt='frLobo' />
           </div>
         </div>
       </div>
@@ -80,15 +133,17 @@ const About = () => {
 
           <div className='md:w-7/12 Abril-Regular md:text-[40px] text-white text-center'>
             Discovering the History and Beauty
-            <br /><span className='md:text-[32px]'>of</span>
-            <br />Our Lady Of Carmel Chaple
+            <br />
+            <span className='md:text-[32px]'>of</span>
+            <br />
+            Our Lady Of Carmel Chaple
           </div>
 
           <div className='Livvic-Medium sm:text-2xl text-center text-white md:break-normal break-all'>
-            {highlightText(description, quotedText, 'yellow')} &nbsp;
+            {highlightText(description, quotedText, "yellow")} &nbsp;
             {description && description?.length > 60 && (
               <button
-                className="underline text-[yellow]"
+                className='underline text-[yellow]'
                 onClick={toggleDescription}
               >
                 {hideDescription ? "less" : "more"}
@@ -98,7 +153,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
