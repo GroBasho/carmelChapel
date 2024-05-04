@@ -430,7 +430,6 @@ export const havenlyHomeResting1 = [
     "ward": "-"
   }
 ]
-
 export const havenlyHomeResting2 = [
   {
     "id": 2,
